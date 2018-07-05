@@ -71,16 +71,16 @@ rm(map.table.clsc)
 clsc.data = sum_by_key(map.clsc, colnames(map.clsc)[1]) # sum_by_key in function.R
 rm(map.clsc)
 
-#### extract data for pophr loader ####
+#### extract nine indicators for pophr loader ####
 clsc.values = ext_concept(clsc.data, "CLSC_code")
 clsc.values = lapply(clsc.values, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
 
 #### extract age pyramid ####
 clsc.pop.values = ext_pop_number(clsc.data, "CLSC_code")
-
 clsc.pop.values = lapply(list(clsc.pop.values), ChangeNames_pop)#from 2cols, ChangeNames to "0-14","15-64","65+","Year"
 
 clsc.age.pry = ext_age_pry(clsc.data, "CLSC_code")
+clsc.age.pry$Year = 2016
 
 clsc.values = c(clsc.values, clsc.pop.values = clsc.pop.values, clsc.age.pry = list(clsc.age.pry))
 rm(clsc.pop.values) ; rm(clsc.age.pry)
