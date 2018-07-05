@@ -81,7 +81,34 @@ clsc.age.pry$Year = 2016
 clsc.values = c(clsc.values, clsc.pop.values = clsc.pop.values, clsc.age.pry = list(clsc.age.pry))
 rm(clsc.pop.values) ; rm(clsc.age.pry)
 #### output results ####
-writecsv(clsc.values) # the file name contains the first part of the first col in list 1 of clsc.values
+writecsv(clsc.values, "CLSC") # the file name contains the first part of the first col in list 1 of clsc.values
 
+
+
+# Canada 2016 data, at province level, no mapping needed -------------------------------------
+
+#### read in the datasets obtained from census 2016, at provincial level ####
+ca.data = df_combine("Data/census_data_2016/Canada_wise_data_by_prov/vtapChnNRqQopJ_data.csv",
+                     "Data/census_data_2016/Canada_wise_data_by_prov/vtapChnNRqQopJ_header.txt")
+
+ca.data$year = 2016
+#### add aggregatable value for lowincome indicators ####
+ca.data = add_lowincome_denom(ca.data)
+
+#### extract nine indicators for pophr loader ####
+ca.values = ext_concept(ca.data, names(ca.data)[1])
+ca.values = lapply(province.values, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
+
+#### extract age pyramid ####
+ca.pop.values = ext_pop_number(ca.data, names(ca.data)[1])
+ca.pop.values = lapply(list(ca.pop.values), ChangeNames_pop)#from 2cols, ChangeNames to "0-14","15-64","65+","Year"
+
+ca.age.pry = ext_age_pry(ca.data, names(ca.data)[1])
+ca.age.pry$Year = 2016
+
+ca.values = c(ca.values, ca.pop.values = ca.pop.values, ca.age.pry = list(ca.age.pry))
+rm(ca.pop.values) ; rm(ca.age.pry)
+#### output results ####
+writecsv(ca.values, "CA_Prov") # the file name contains the first part of the first col in list 1 of clsc.values
 
 
