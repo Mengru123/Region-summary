@@ -114,6 +114,17 @@ ext_concept = function(df, key) {
     return(dfs)
 }
 
+ext_pop_number = function(df, key) {
+    Pop_number <- df %>%
+        select(as.character(key),
+               `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes`,
+               `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 0 to 14 years ; Both sexes`,
+               `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 15 to 64 years ; Both sexes`,
+               `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 65 years and over ; Both sexes`,
+               year)
+    return(Pop_number)
+}
+
 ChangeNames = function(x) {
     names(x)[2:length(x)] = c("Nom", "Den", "Year")
     return(x)
@@ -167,4 +178,9 @@ ext_age_pry = function(df,key) {
     
     df.age.sex <- rbind(df.M, df.F)
     df.age.sex
+}
+
+writecsv<-function(df.list){
+    for (i in 1:length(df.list))
+        write.csv(df.list[i], file = paste0("Output/",names(df.list[i]), "_2018.07.05.csv"))
 }
