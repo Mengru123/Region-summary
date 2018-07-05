@@ -1,0 +1,5 @@
+2016 Census Profiles Files / Profile of Census Disseminations Areas
+COL0 - GEO UID
+COL1 - Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)
+COL2 - Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%) / 0 to 17 years (%)
+

@@ -1,0 +1,6 @@
+2016 Census Profiles Files / Profile of Census Divisions
+COL0 - GEO UID
+COL1 - Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes
+COL2 - Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 0 to 14 years ; Both sexes
+COL3 - Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 15 to 64 years ; Both sexes
+COL4 - Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 65 years and over ; Both sexes

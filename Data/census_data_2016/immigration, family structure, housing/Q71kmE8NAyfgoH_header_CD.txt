@@ -1,0 +1,26 @@
+2016 Census Profiles Files / Profile of Census Divisions
+COL0 - GEO UID
+COL1 - Households by type / Total - Private households by household type - 100% data
+COL2 - Households by type / Total - Private households by household type - 100% data / One-census-family households
+COL3 - Households by type / Total - Private households by household type - 100% data / One-census-family households / Without children in a census family
+COL4 - Households by type / Total - Private households by household type - 100% data / One-census-family households / With children in a census family
+COL5 - Households by type / Total - Private households by household type - 100% data / Multiple-census-family households
+COL6 - Households by type / Total - Private households by household type - 100% data / Non-census-family households
+COL7 - Households by type / Total - Private households by household type - 100% data / Non-census-family households / One-person households
+COL8 - Households by type / Total - Private households by household type - 100% data / Non-census-family households / Two-or-more person non-census-family households
+COL9 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data
+COL10 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Canadian citizens
+COL11 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Not Canadian citizens
+COL12 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data
+COL13 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-immigrants
+COL14 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants
+COL15 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-permanent residents
+COL16 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Canadian citizens / Canadian citizens aged under 18
+COL17 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Canadian citizens / Canadian citizens aged 18 and over
+COL18 - Housing - Total Sex / Total - Private households by tenure - 25% sample data
+COL19 - Housing - Total Sex / Total - Private households by tenure - 25% sample data / Owner
+COL20 - Housing - Total Sex / Total - Private households by tenure - 25% sample data / Renter
+COL21 - Housing - Total Sex / Total - Private households by tenure - 25% sample data / Band housing
+COL22 - Housing - Total Sex / Total -  Owner and tenant households with household total income greater than zero, in non-farm, non-reserve private dwellings by shelter-cost-to-income ratio - 25% sample data
+COL23 - Housing - Total Sex / Total -  Owner and tenant households with household total income greater than zero, in non-farm, non-reserve private dwellings by shelter-cost-to-income ratio - 25% sample data / Spending less than 30% of income on shelter costs
+COL24 - Housing - Total Sex / Total -  Owner and tenant households with household total income greater than zero, in non-farm, non-reserve private dwellings by shelter-cost-to-income ratio - 25% sample data / Spending 30% or more of income on shelter costs
