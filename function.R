@@ -180,7 +180,7 @@ ext_age_pry = function(df,key) {
     df.age.sex
 }
 
-writecsv<-function(df.list){
+writecsv<-function(df.list, key){
     for (i in 1:length(df.list))
-        write.csv(df.list[i], file = paste0("Output/",strsplit(names(clsc.values[[1]])[1], '_')[[1]][1],"_",names(df.list[i]), "_2018.07.05.csv"))
+        write.csv(df.list[i], file = paste0("Output/",as.character(key),"_",names(df.list[i]), "_2018.07.05.csv"))
 }
