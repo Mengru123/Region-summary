@@ -31,6 +31,11 @@ df_combine = function(...) {
     }
 }
 
+add_lowincome_denom = function(df) {
+    df$lowincome_denominator_0_17 = df$`Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT) / 0 to 17 years` / (census.data$`Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%) / 0 to 17 years (%)` / 100)
+    df$lowincome_denominator_total = df$`Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT)` / (census.data$`Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)` /100)
+    df
+}
 sum_by_key = function(df, key) {  # group to health regions
     t<- df %>%
         group_by_(as.character(key)) %>%

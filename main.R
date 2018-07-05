@@ -5,10 +5,11 @@ library(tidyr)
 
 options("digits" = 12)
 source('function.R')
-# read data obtained from Canada census, 2016
-                  
-#### read in the datasets obtained from census, at four different region devisions ####
-#df_combine in function.R
+
+# Quebec 2016 data, at CLSC level -----------------------------------------
+
+#### read in the datasets obtained from census 2016, at four different region devisions ####
+# df_combine in function.R
 cd.data = df_combine("Data/census_data_2016/nFzbbLDEVuPz11pLQ_data_CD.csv", 
                      "Data/census_data_2016/nFzbbLDEVuPz11pLQ_data_CD.txt",
                      "Data/census_data_2016/income_cutof_pre/BGjxddMe_data_CD.csv",
@@ -55,11 +56,6 @@ census.data$year = 2016
 rm(cd.data);rm(csd.data);rm(ct.data);rm(da.data)
 
 #### add aggregatable value for lowincome indicators ####
-add_lowincome_denom = function(df) {
-    df$lowincome_denominator_0_17 = df$`Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT) / 0 to 17 years` / (census.data$`Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%) / 0 to 17 years (%)` / 100)
-    df$lowincome_denominator_total = df$`Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT)` / (census.data$`Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)` /100)
-    df
-}
 census.data = add_lowincome_denom(census.data)
 
 #### map to health region: CLSC ####
@@ -85,4 +81,7 @@ clsc.age.pry$Year = 2016
 clsc.values = c(clsc.values, clsc.pop.values = clsc.pop.values, clsc.age.pry = list(clsc.age.pry))
 rm(clsc.pop.values) ; rm(clsc.age.pry)
 #### output results ####
-writecsv(clsc.values) 
+writecsv(clsc.values) # the file name contains the first part of the first col in list 1 of clsc.values
+
+
+
