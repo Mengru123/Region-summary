@@ -63,7 +63,7 @@ ext_concept = function(df, key) {
                `Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data / 0 to 17 years`, 
                year)
     
-    Emplyment = df %>%
+    Employment = df %>%
         select(as.character(key),
                `Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force / Employed`,
                `Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force`,
@@ -75,7 +75,7 @@ ext_concept = function(df, key) {
                `Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data`,
                year)
     
-    Language_fren = df %>%                                                     # speak english or french
+    Language_FrEn = df %>%                                                     # speak english or french
         mutate(lang_fren= `Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / French only ; Both sexes` 
                + `Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English and French ; Both sexes` 
                +`Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English only ; Both sexes`)  %>% 
@@ -109,7 +109,7 @@ ext_concept = function(df, key) {
     
     Housing_type = df %>%
         select(as.character(key),
-               `Housing - Total Sex / Total - Private households by tenure - 25% sample data / Owner`,
+               `Housing - Total Sex / Total - Private households by tenure - 25% sample data / Renter`,
                `Housing - Total Sex / Total - Private households by tenure - 25% sample data`,
                year)
     
@@ -117,9 +117,9 @@ ext_concept = function(df, key) {
                Lowincome_LICO_0_17 = Lowincome_LICO_0_17, 
                Lowincome_LIM_total = Lowincome_LIM_total,
                Lowincome_LIM_0_17 = Lowincome_LIM_0_17,
-               Emplyment = Emplyment,
+               Employment = Employment,
                Edu_lowerthanhigh = Edu_lowerthanhigh,
-               Language_fren = Language_fren,
+               Language_FrEn = Language_FrEn,
                Journey_towork = Journey_towork,
                Household_type = Household_type, 
                Immigrant_type = Immigrant_type,
@@ -131,9 +131,9 @@ ext_pop_number = function(df, key) {
     Pop_number <- df %>%
         select(as.character(key),
                `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes`,
-               `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 0 to 14 years ; Both sexes`,
-               `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 15 to 64 years ; Both sexes`,
-               `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 65 years and over ; Both sexes`,
+               #`Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 0 to 14 years ; Both sexes`,
+              # `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 15 to 64 years ; Both sexes`,
+              # `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 65 years and over ; Both sexes`,
                year)
     return(Pop_number)
 }
@@ -144,7 +144,7 @@ ChangeNames = function(x) {
 }
 
 ChangeNames_pop = function(x) {
-    names(x)[2:length(x)] = c("Total_population", "0-14","15-64","65+","Year")
+    names(x)[2:length(x)] = c("Total_population", "Year") #"0-14","15-64","65+",
     return(x)
 }
 
