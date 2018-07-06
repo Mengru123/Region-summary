@@ -1,0 +1,35 @@
+2011 National Household Survey (NHS) Profiles Files / Profile of Census Subdivisions
+COL0 - GEO UID
+COL1 - Citizenship - Both sexes / Total population in private households by citizenship; Both sexes
+COL2 - Citizenship - Both sexes / Total population in private households by citizenship; Both sexes / Canadian citizens; Both sexes
+COL3 - Citizenship - Both sexes / Total population in private households by citizenship; Both sexes / Canadian citizens; Both sexes / Canadian citizens aged under 18; Both sexes
+COL4 - Citizenship - Both sexes / Total population in private households by citizenship; Both sexes / Canadian citizens; Both sexes / Canadian citizens aged 18 and over; Both sexes
+COL5 - Citizenship - Both sexes / Total population in private households by citizenship; Both sexes / Not Canadian citizens; Both sexes
+COL6 - Immigrant status and period of immigration - Both sexes / Total population in private households by immigrant status and period of immigration; Both sexes
+COL7 - Immigrant status and period of immigration - Both sexes / Total population in private households by immigrant status and period of immigration; Both sexes / Non-immigrants; Both sexes
+COL8 - Immigrant status and period of immigration - Both sexes / Total population in private households by immigrant status and period of immigration; Both sexes / Immigrants; Both sexes
+COL9 - Immigrant status and period of immigration - Both sexes / Total population in private households by immigrant status and period of immigration; Both sexes / Non-permanent residents; Both sexes
+COL10 - Education - Both sexes / Total population aged 15 years and over by highest certificate, diploma or degree; Both sexes
+COL11 - Education - Both sexes / Total population aged 15 years and over by highest certificate, diploma or degree; Both sexes / No certificate, diploma or degree; Both sexes
+COL12 - Education - Both sexes / Total population aged 15 years and over by highest certificate, diploma or degree; Both sexes / High school diploma or equivalent; Both sexes
+COL13 - Education - Both sexes / Total population aged 15 years and over by highest certificate, diploma or degree; Both sexes / Postsecondary certificate, diploma or degree; Both sexes
+COL14 - Labour force status - Both sexes / Total population aged 15 years and over by labour force status; Both sexes
+COL15 - Labour force status - Both sexes / Total population aged 15 years and over by labour force status; Both sexes / In the labour force; Both sexes
+COL16 - Labour force status - Both sexes / Total population aged 15 years and over by labour force status; Both sexes / In the labour force; Both sexes / Employed; Both sexes
+COL17 - Labour force status - Both sexes / Total population aged 15 years and over by labour force status; Both sexes / In the labour force; Both sexes / Unemployed; Both sexes
+COL18 - Labour force status - Both sexes / Total population aged 15 years and over by labour force status; Both sexes / Not in the labour force; Both sexes
+COL19 - Mode of transportation - Both sexes / Total employed population aged 15 years and over with a usual place of work or no fixed workplace address by mode of transportation; Both sexes
+COL20 - Mode of transportation - Both sexes / Total employed population aged 15 years and over with a usual place of work or no fixed workplace address by mode of transportation; Both sexes / Car, truck or van - as a driver; Both sexes
+COL21 - Mode of transportation - Both sexes / Total employed population aged 15 years and over with a usual place of work or no fixed workplace address by mode of transportation; Both sexes / Car, truck or van - as a passenger; Both sexes
+COL22 - Mode of transportation - Both sexes / Total employed population aged 15 years and over with a usual place of work or no fixed workplace address by mode of transportation; Both sexes / Public transit; Both sexes
+COL23 - Mode of transportation - Both sexes / Total employed population aged 15 years and over with a usual place of work or no fixed workplace address by mode of transportation; Both sexes / Walked; Both sexes
+COL24 - Mode of transportation - Both sexes / Total employed population aged 15 years and over with a usual place of work or no fixed workplace address by mode of transportation; Both sexes / Bicycle; Both sexes
+COL25 - Mode of transportation - Both sexes / Total employed population aged 15 years and over with a usual place of work or no fixed workplace address by mode of transportation; Both sexes / Other methods; Both sexes
+COL26 - Income of individuals in 2010 (part 4) - Both sexes / Population in private households for income status; Both sexes
+COL27 - Income of individuals in 2010 (part 4) - Both sexes / Population in private households for income status; Both sexes / Less than 18 years; Both sexes
+COL28 - Income of individuals in 2010 (part 4) - Both sexes / Population in private households for income status; Both sexes / 18 to 64 years; Both sexes
+COL29 - Income of individuals in 2010 (part 4) - Both sexes / Population in private households for income status; Both sexes / 65 years and over; Both sexes
+COL30 - Income of individuals in 2010 (part 4) - Both sexes / In low income in 2010 based on after-tax low-income measure (LIM-AT); Both sexes
+COL31 - Income of individuals in 2010 (part 4) - Both sexes / In low income in 2010 based on after-tax low-income measure (LIM-AT); Both sexes / Less than 18 years; Both sexes
+COL32 - Income of individuals in 2010 (part 4) - Both sexes / In low income in 2010 based on after-tax low-income measure (LIM-AT); Both sexes / 18 to 64 years; Both sexes
+COL33 - Income of individuals in 2010 (part 4) - Both sexes / In low income in 2010 based on after-tax low-income measure (LIM-AT); Both sexes / 65 years and over; Both sexes

@@ -1,0 +1,9 @@
+2016 Census Profiles Files / Profile of Census Disseminations Areas
+COL0 - GEO UID
+COL1 - Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data
+COL2 - Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data / 0 to 17 years
+COL3 - Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data / 18 to 64 years
+COL4 - Income - Total Sex / In low income based on the Low-income measure, after tax (LIM-AT)
+COL5 - Income - Total Sex / In low income based on the Low-income measure, after tax (LIM-AT) / 0 to 17 years
+COL6 - Income - Total Sex / In low income based on the Low-income measure, after tax (LIM-AT) / 18 to 64 years
+COL7 - Income - Total Sex / In low income based on the Low-income measure, after tax (LIM-AT) / 65 years and over
