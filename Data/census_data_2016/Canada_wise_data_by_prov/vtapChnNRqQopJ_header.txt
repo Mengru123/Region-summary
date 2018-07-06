@@ -1,0 +1,109 @@
+2016 Census Profiles Files / Profile of Provinces
+COL0 - GEO UID
+COL1 - Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes
+COL2 - Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 0 to 14 years ; Both sexes
+COL3 - Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 15 to 64 years ; Both sexes
+COL4 - Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 65 years and over ; Both sexes
+COL5 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males
+COL6 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 0 to 14 years ; Males
+COL7 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 0 to 14 years ; Males / 0 to 4 years ; Males
+COL8 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 0 to 14 years ; Males / 5 to 9 years ; Males
+COL9 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 0 to 14 years ; Males / 10 to 14 years ; Males
+COL10 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males
+COL11 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 15 to 19 years ; Males
+COL12 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 20 to 24 years ; Males
+COL13 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 25 to 29 years ; Males
+COL14 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 30 to 34 years ; Males
+COL15 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 35 to 39 years ; Males
+COL16 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 40 to 44 years ; Males
+COL17 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 45 to 49 years ; Males
+COL18 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 50 to 54 years ; Males
+COL19 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 55 to 59 years ; Males
+COL20 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 15 to 64 years ; Males / 60 to 64 years ; Males
+COL21 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males
+COL22 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males / 65 to 69 years ; Males
+COL23 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males / 70 to 74 years ; Males
+COL24 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males / 75 to 79 years ; Males
+COL25 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males / 80 to 84 years ; Males
+COL26 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males / 85 years and over ; Males
+COL27 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males / 85 years and over ; Males / 85 to 89 years ; Males
+COL28 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males / 85 years and over ; Males / 90 to 94 years ; Males
+COL29 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males / 85 years and over ; Males / 95 to 99 years ; Males
+COL30 - Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males / 65 years and over ; Males / 85 years and over ; Males / 100 years and over ; Males
+COL31 - Age & Sex - Males / Average age of the population ; Males
+COL32 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females
+COL33 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 0 to 14 years ; Females
+COL34 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 0 to 14 years ; Females / 0 to 4 years ; Females
+COL35 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 0 to 14 years ; Females / 5 to 9 years ; Females
+COL36 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 0 to 14 years ; Females / 10 to 14 years ; Females
+COL37 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females
+COL38 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 15 to 19 years ; Females
+COL39 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 20 to 24 years ; Females
+COL40 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 25 to 29 years ; Females
+COL41 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 30 to 34 years ; Females
+COL42 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 35 to 39 years ; Females
+COL43 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 40 to 44 years ; Females
+COL44 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 45 to 49 years ; Females
+COL45 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 50 to 54 years ; Females
+COL46 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 55 to 59 years ; Females
+COL47 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 15 to 64 years ; Females / 60 to 64 years ; Females
+COL48 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females
+COL49 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females / 65 to 69 years ; Females
+COL50 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females / 70 to 74 years ; Females
+COL51 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females / 75 to 79 years ; Females
+COL52 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females / 80 to 84 years ; Females
+COL53 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females / 85 years and over ; Females
+COL54 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females / 85 years and over ; Females / 85 to 89 years ; Females
+COL55 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females / 85 years and over ; Females / 90 to 94 years ; Females
+COL56 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females / 85 years and over ; Females / 95 to 99 years ; Females
+COL57 - Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females / 65 years and over ; Females / 85 years and over ; Females / 100 years and over ; Females
+COL58 - Age & Sex - Females / Average age of the population ; Females
+COL59 - Households by type / Total - Private households by household type - 100% data
+COL60 - Households by type / Total - Private households by household type - 100% data / One-census-family households
+COL61 - Households by type / Total - Private households by household type - 100% data / One-census-family households / Without children in a census family
+COL62 - Households by type / Total - Private households by household type - 100% data / One-census-family households / With children in a census family
+COL63 - Households by type / Total - Private households by household type - 100% data / Multiple-census-family households
+COL64 - Households by type / Total - Private households by household type - 100% data / Non-census-family households
+COL65 - Households by type / Total - Private households by household type - 100% data / Non-census-family households / One-person households
+COL66 - Households by type / Total - Private households by household type - 100% data / Non-census-family households / Two-or-more person non-census-family households
+COL67 - Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes
+COL68 - Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English only ; Both sexes
+COL69 - Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / French only ; Both sexes
+COL70 - Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English and French ; Both sexes
+COL71 - Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / Neither English nor French ; Both sexes
+COL72 - Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT)
+COL73 - Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT) / 0 to 17 years
+COL74 - Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)
+COL75 - Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%) / 0 to 17 years (%)
+COL76 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data
+COL77 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Canadian citizens
+COL78 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Canadian citizens / Canadian citizens aged under 18
+COL79 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Canadian citizens / Canadian citizens aged 18 and over
+COL80 - Immigration - Total Sex / Total - Citizenship for the population in private households - 25% sample data / Not Canadian citizens
+COL81 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data
+COL82 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-immigrants
+COL83 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants
+COL84 - Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-permanent residents
+COL85 - Housing - Total Sex / Total - Private households by tenure - 25% sample data
+COL86 - Housing - Total Sex / Total - Private households by tenure - 25% sample data / Owner
+COL87 - Housing - Total Sex / Total - Private households by tenure - 25% sample data / Renter
+COL88 - Housing - Total Sex / Total - Private households by tenure - 25% sample data / Band housing
+COL89 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data
+COL90 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / No certificate, diploma or degree
+COL91 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / Secondary (high) school diploma or equivalency certificate
+COL92 - Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / Postsecondary certificate, diploma or degree
+COL93 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data
+COL94 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force
+COL95 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force / Employed
+COL96 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force / Unemployed
+COL97 - Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / Not in the labour force
+COL98 - Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data
+COL99 - Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data / Car, truck, van - as a driver
+COL100 - Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data / Car, truck, van - as a passenger
+COL101 - Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data / Public transit
+COL102 - Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data / Walked
+COL103 - Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data / Bicycle
+COL104 - Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data / Other method
+COL105 - Housing - Total Sex / Total -  Owner and tenant households with household total income greater than zero, in non-farm, non-reserve private dwellings by shelter-cost-to-income ratio - 25% sample data
+COL106 - Housing - Total Sex / Total -  Owner and tenant households with household total income greater than zero, in non-farm, non-reserve private dwellings by shelter-cost-to-income ratio - 25% sample data / Spending less than 30% of income on shelter costs
+COL107 - Housing - Total Sex / Total -  Owner and tenant households with household total income greater than zero, in non-farm, non-reserve private dwellings by shelter-cost-to-income ratio - 25% sample data / Spending 30% or more of income on shelter costs
