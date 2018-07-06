@@ -31,11 +31,6 @@ df_combine = function(...) {
     }
 }
 
-add_lowincome_denom = function(df) {
-    df$lowincome_denominator_0_17 = df$`Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT) / 0 to 17 years` / (df$`Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%) / 0 to 17 years (%)` / 100)
-    df$lowincome_denominator_total = df$`Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT)` / (df$`Income - Total Sex / Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)` /100)
-    df
-}
 sum_by_key = function(df, key) {  # group to health regions
     t<- df %>%
         group_by_(as.character(key)) %>%
@@ -44,31 +39,43 @@ sum_by_key = function(df, key) {  # group to health regions
 }
 
 ext_concept = function(df, key) {
-    Lowincome_total = df %>% 
+    Lowincome_LICO_total = df %>% 
         select(as.character(key),
                `Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT)`,
-               `lowincome_denominator_total`,
+               `Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data`,
                year )
     
-    lowincome_0_17 = df %>%
+    Lowincome_LICO_0_17 = df %>%
         select(as.character(key),
                `Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT) / 0 to 17 years`,
-               `lowincome_denominator_0_17`, 
+               `Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data / 0 to 17 years`, 
+               year)
+   
+     Lowincome_LIM_total = df %>% 
+        select(as.character(key),
+               `Income - Total Sex / In low income based on the Low-income measure, after tax (LIM-AT)`,
+               `Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data`,
+               year )
+    
+    Lowincome_LIM_0_17 = df %>%
+        select(as.character(key),
+               `Income - Total Sex / In low income based on the Low-income measure, after tax (LIM-AT) / 0 to 17 years`,
+               `Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data / 0 to 17 years`, 
                year)
     
-    emplyment = df %>%
+    Emplyment = df %>%
         select(as.character(key),
                `Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force / Employed`,
                `Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force`,
                year)
     
-    edu_lowerthanhigh = df %>%
+    Edu_lowerthanhigh = df %>%
         select(as.character(key),
                `Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / No certificate, diploma or degree`,
                `Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data`,
                year)
     
-    language_fren = df %>%                                                     # speak english or french
+    Language_fren = df %>%                                                     # speak english or french
         mutate(lang_fren= `Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / French only ; Both sexes` 
                + `Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English and French ; Both sexes` 
                +`Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English only ; Both sexes`)  %>% 
@@ -84,7 +91,7 @@ ext_concept = function(df, key) {
                `Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data`,
                year)
     
-    household_type = df %>%
+    Household_type = df %>%
         mutate(census_family_all = `Households by type / Total - Private households by household type - 100% data / One-census-family households`
                + `Households by type / Total - Private households by household type - 100% data / Multiple-census-family households`) %>%
         select(as.character(key),
@@ -92,7 +99,7 @@ ext_concept = function(df, key) {
                `Households by type / Total - Private households by household type - 100% data`,
                year)
     
-    immigrant_type = df %>%
+    Immigrant_type = df %>%
         mutate(PR_above = `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-immigrants`
                + `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants`) %>%
         select(as.character(key),
@@ -100,22 +107,23 @@ ext_concept = function(df, key) {
                `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data`,
                year)
     
-    housing_type = df %>%
+    Housing_type = df %>%
         select(as.character(key),
                `Housing - Total Sex / Total - Private households by tenure - 25% sample data / Owner`,
                `Housing - Total Sex / Total - Private households by tenure - 25% sample data`,
                year)
     
-    dfs = list(Lowincome_total = Lowincome_total, 
-               lowincome_0_17 = lowincome_0_17, 
-               emplyment = emplyment,
-               edu_lowerthanhigh = edu_lowerthanhigh,
-               language_fren = language_fren,
+    dfs = list(Lowincome_LICO_total = Lowincome_LICO_total, 
+               Lowincome_LICO_0_17 = Lowincome_LICO_0_17, 
+               Lowincome_LIM_total = Lowincome_LIM_total,
+               Lowincome_LIM_0_17 = Lowincome_LIM_0_17,
+               Emplyment = Emplyment,
+               Edu_lowerthanhigh = Edu_lowerthanhigh,
+               Language_fren = Language_fren,
                Journey_towork = Journey_towork,
-               Journey_towork = Journey_towork,
-               household_type = household_type, 
-               immigrant_type = immigrant_type,
-               housing_type = housing_type)
+               Household_type = Household_type, 
+               Immigrant_type = Immigrant_type,
+               Housing_type = Housing_type)
     return(dfs)
 }
 

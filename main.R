@@ -12,8 +12,8 @@ source('function.R')
 # df_combine in function.R
 cd.data = df_combine("Data/census_data_2016/nFzbbLDEVuPz11pLQ_data_CD.csv", 
                      "Data/census_data_2016/nFzbbLDEVuPz11pLQ_data_CD.txt",
-                     "Data/census_data_2016/income_cutof_pre/BGjxddMe_data_CD.csv",
-                     "Data/census_data_2016/income_cutof_pre/BGjxddMe_data_CD.txt",
+                     "Data/census_data_2016/income_cutof_pre/bC08v9cE6LS_data_CD.csv",
+                     "Data/census_data_2016/income_cutof_pre/bC08v9cE6LS_header_CD.txt",
                      "Data/census_data_2016/total_population/fi3xBCGF33oxEm_data_CD.csv",
                      "Data/census_data_2016/total_population/fi3xBCGF33oxEm_data_CD.txt",
                      "Data/census_data_2016/immigration, family structure, housing/Q71kmE8NAyfgoH_data_CD.csv",
@@ -22,8 +22,8 @@ cd.data = cd.data[, -c(2:5)]
 
 csd.data = df_combine("Data/census_data_2016/E8v0huQ0frN4m_data_CSD.csv",
                       "Data/census_data_2016/E8v0huQ0frN4m_data_CSD.txt",
-                      "Data/census_data_2016/income_cutof_pre/MtTcrBvBmKMcMe_data_CSD.csv",
-                      "Data/census_data_2016/income_cutof_pre/MtTcrBvBmKMcMe_data_CSD.txt",
+                      "Data/census_data_2016/income_cutof_pre/80uJhuNcMUij8uaNrC_data_CSD.csv",
+                      "Data/census_data_2016/income_cutof_pre/80uJhuNcMUij8uaNrC_header_CSD.txt",
                       "Data/census_data_2016/total_population/k2Tb5LTN4ON_data_CSD.csv",
                       "Data/census_data_2016/total_population/k2Tb5LTN4ON_data_CSD.txt",
                       "Data/census_data_2016/immigration, family structure, housing/wURdDj13eJ_data_CSD.csv",
@@ -32,8 +32,8 @@ csd.data = csd.data[, -c(2:5)]
 
 ct.data = df_combine("Data/census_data_2016/G8iUTCA6zplcndk_data_CT.csv",
                      "Data/census_data_2016/G8iUTCA6zplcndk_data_CT.txt",
-                     "Data/census_data_2016/income_cutof_pre/H3yaFrFVGjHuc_data_CT.csv",
-                     "Data/census_data_2016/income_cutof_pre/H3yaFrFVGjHuc_data_CT.txt",
+                     "Data/census_data_2016/income_cutof_pre/sNfIvcAf6rLcz_data_CT.csv",
+                     "Data/census_data_2016/income_cutof_pre/sNfIvcAf6rLcz_header_CT.txt",
                      "Data/census_data_2016/total_population/swC9HfRqADoe_data_CT.csv",
                      "Data/census_data_2016/total_population/swC9HfRqADoe_data_CT.txt",
                      "Data/census_data_2016/immigration, family structure, housing/b7pvli7FLB43i_data_CT.csv",
@@ -42,8 +42,8 @@ ct.data = ct.data[, -c(2:4)]
 
 da.data = df_combine("Data/census_data_2016/zngeryB53_data_DA.csv",
                      "Data/census_data_2016/zngeryB53_data_DA.txt",
-                     "Data/census_data_2016/income_cutof_pre/ULkBM9b67fy_data_DA.csv",
-                     "Data/census_data_2016/income_cutof_pre/ULkBM9b67fy_data_DA.txt",
+                     "Data/census_data_2016/income_cutof_pre/qO6fozE6eB_data_DA.csv",
+                     "Data/census_data_2016/income_cutof_pre/qO6fozE6eB_header_DA.txt",
                      "Data/census_data_2016/total_population/ErO0Imol3vrRjoi_data_DA.csv",
                      "Data/census_data_2016/total_population/ErO0Imol3vrRjoi_data_DA.txt",
                      "Data/census_data_2016/immigration, family structure, housing/6IOEpi8povq3vI66_data_DA.csv",
@@ -54,9 +54,6 @@ da.data = da.data[, -c(2:4)]
 census.data = do.call("rbind", list(cd.data, csd.data, ct.data, da.data))
 census.data$year = 2016
 rm(cd.data);rm(csd.data);rm(ct.data);rm(da.data)
-
-#### add aggregatable value for lowincome indicators ####
-census.data = add_lowincome_denom(census.data)
 
 #### map to health region: CLSC ####
 map.table.clsc = read.csv("Data/census_data_2016/mapping_tables/clsc_census_mapping_gd.csv",header = TRUE) # mapping table btw census and CLSC, table obtained from Guido
@@ -82,7 +79,8 @@ clsc.values = c(clsc.values, clsc.pop.values = clsc.pop.values, clsc.age.pry = l
 rm(clsc.pop.values) ; rm(clsc.age.pry)
 #### output results ####
  Canada_wise_data
-writecsv(clsc.values, "CLSC") # the file name contains the first part of the first col in list 1 of clsc.values
+writecsv(clsc.values, "CLSC_2016") # the file name contains the first part of the first col in list 1 of clsc.values
+
 
 
 
@@ -90,15 +88,15 @@ writecsv(clsc.values, "CLSC") # the file name contains the first part of the fir
 
 #### read in the datasets obtained from census 2016, at provincial level ####
 ca.data = df_combine("Data/census_data_2016/Canada_wise_data_by_prov/vtapChnNRqQopJ_data.csv",
-                     "Data/census_data_2016/Canada_wise_data_by_prov/vtapChnNRqQopJ_header.txt")
+                     "Data/census_data_2016/Canada_wise_data_by_prov/vtapChnNRqQopJ_header.txt",
+                     "Data/census_data_2016/Canada_wise_data_by_prov/StozuELDohF9jp_data.csv",
+                     "Data/census_data_2016/Canada_wise_data_by_prov/StozuELDohF9jp_header.txt")
 
 ca.data$year = 2016
-#### add aggregatable value for lowincome indicators ####
-ca.data = add_lowincome_denom(ca.data)
 
-#### extract nine indicators for pophr loader ####
+#### extract indicators for pophr loader ####
 ca.values = ext_concept(ca.data, names(ca.data)[1])
-ca.values = lapply(province.values, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
+ca.values = lapply(ca.values, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
 
 #### extract age pyramid ####
 ca.pop.values = ext_pop_number(ca.data, names(ca.data)[1])
@@ -110,9 +108,5 @@ ca.age.pry$Year = 2016
 ca.values = c(ca.values, ca.pop.values = ca.pop.values, ca.age.pry = list(ca.age.pry))
 rm(ca.pop.values) ; rm(ca.age.pry)
 #### output results ####
-writecsv(ca.values, "CA_Prov") # the file name contains the first part of the first col in list 1 of clsc.values
+writecsv(ca.values, "CA_Prov_2016") # the file name contains the first part of the first col in list 1 of clsc.values
 
-
-
-writecsv(clsc.values, "QC_CLSC") 
-master
