@@ -78,7 +78,6 @@ clsc.age.pry$Year = 2016
 clsc.values = c(clsc.values, clsc.pop.values = clsc.pop.values, clsc.age.pry = list(clsc.age.pry))
 rm(clsc.pop.values) ; rm(clsc.age.pry)
 #### output results ####
- Canada_wise_data
 writecsv(clsc.values, "CLSC_2016") # the file name contains the first part of the first col in list 1 of clsc.values
 
 
