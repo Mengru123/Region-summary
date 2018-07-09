@@ -82,7 +82,7 @@ clsc.age.pry.2011$Year = 2011
 clsc.values.2011 = c(clsc.values.2011, clsc.pop.values = clsc.pop.values.2011, clsc.age.pry = list(clsc.age.pry.2011))
 rm(clsc.pop.values.2011) ; rm(clsc.age.pry.2011)
 #### output results ####
-writecsv(clsc.values, "CLSC_2011")
+writecsv(clsc.values.2011, "CLSC_2011")
 
 
 # Canada 2011 data, at province level, no mapping needed -------------------------------------
@@ -109,5 +109,5 @@ ca.age.pry.2011$Year = 2011
 ca.values.2011 = c(ca.values.2011, ca.pop.values = ca.pop.values.2011, ca.age.pry = list(ca.age.pry.2011))
 rm(ca.pop.values.2011) ; rm(ca.age.pry.2011)
 #### output results ####
-writecsv(ca.values, "CA_Prov_2011") # the file name contains the first part of the first col in list 1 of clsc.values
+writecsv(ca.values.2011, "CA_Prov_2011") # the file name contains the first part of the first col in list 1 of clsc.values
 

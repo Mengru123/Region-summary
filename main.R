@@ -82,32 +82,32 @@ clsc.age.pry.2011$Year = 2011
 clsc.values.2011 = c(clsc.values.2011, clsc.pop.values = clsc.pop.values.2011, clsc.age.pry = list(clsc.age.pry.2011))
 rm(clsc.pop.values.2011) ; rm(clsc.age.pry.2011)
 #### output results ####
-writecsv(clsc.values, "CLSC_2011")
+writecsv(clsc.values.2011, "CLSC_2011")
 
 
 # Canada 2011 data, at province level, no mapping needed -------------------------------------
 
 #### read in the datasets obtained from census 2016, at provincial level ####
-ca.data = df_combine("Data/census_data_2011/Canada_wise_data_by_prov/iBNs0aHr8BGB_data.csv",
+ca.data.2011 = df_combine("Data/census_data_2011/Canada_wise_data_by_prov/iBNs0aHr8BGB_data.csv",
                      "Data/census_data_2011/Canada_wise_data_by_prov/iBNs0aHr8BGB_header.txt",
                      "Data/census_data_2011/Canada_wise_data_by_prov/u96UkAd2GnV_data.csv",
                      "Data/census_data_2011/Canada_wise_data_by_prov/u96UkAd2GnV_header.txt")
 
-ca.data$year = 2011
+ca.data.2011$year = 2011
 
 #### extract indicators for pophr loader ####
-ca.values = ext_concept(ca.data, names(ca.data)[1])
-ca.values = lapply(ca.values, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
+ca.values.2011 = ext_concept(ca.data.2011, names(ca.data.2011)[1])
+ca.values.2011 = lapply(ca.values.2011, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
 
 #### extract age pyramid ####
-ca.pop.values = ext_pop_number(ca.data, names(ca.data)[1])
-ca.pop.values = lapply(list(ca.pop.values), ChangeNames_pop)#from 2cols, ChangeNames to "0-14","15-64","65+","Year"
+ca.pop.values.2011 = ext_pop_number(ca.data.2011, names(ca.data.2011)[1])
+ca.pop.values.2011 = lapply(list(ca.pop.values.2011), ChangeNames_pop)#from 2cols, ChangeNames to "0-14","15-64","65+","Year"
 
-ca.age.pry = ext_age_pry(ca.data, names(ca.data)[1])
-ca.age.pry$Year = 2011
+ca.age.pry.2011 = ext_age_pry(ca.data.2011, names(ca.data.2011)[1])
+ca.age.pry.2011$Year = 2011
 
-ca.values = c(ca.values, ca.pop.values = ca.pop.values, ca.age.pry = list(ca.age.pry))
-rm(ca.pop.values) ; rm(ca.age.pry)
+ca.values.2011 = c(ca.values.2011, ca.pop.values = ca.pop.values.2011, ca.age.pry = list(ca.age.pry.2011))
+rm(ca.pop.values.2011) ; rm(ca.age.pry.2011)
 #### output results ####
-writecsv(ca.values, "CA_Prov_2011") # the file name contains the first part of the first col in list 1 of clsc.values
+writecsv(ca.values.2011, "CA_Prov_2011") # the file name contains the first part of the first col in list 1 of clsc.values
 
