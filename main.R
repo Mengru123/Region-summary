@@ -5,8 +5,13 @@ library(tidyr)
 
 options("digits" = 12)
 source('function.R')
+# difference
+# 1. income: in 2011 not sure about whether it's LIM or LICO
+# 2. no low_income_0_17, but low-income_0_6
+# 3. no direct count for low-income population number, but have total number and prevalence, so in script calculate the numerator
+# 4. education here need to added up in the script 15-24,25-65, 65+
 
-# Quebec 2016 data, at CLSC level -----------------------------------------
+# Quebec 2006 data, at CLSC level -----------------------------------------
 
 #### read in the datasets obtained from census 2016, at four different region devisions ####
 # df_combine in function.R
@@ -87,26 +92,25 @@ writecsv(clsc.values, "CLSC_2016") # the file name contains the first part of th
 # Canada 2016 data, at province level, no mapping needed -------------------------------------
 
 #### read in the datasets obtained from census 2016, at provincial level ####
-ca.data = df_combine("Data/census_data_2016/Canada_wise_data_by_prov/vtapChnNRqQopJ_data.csv",
-                     "Data/census_data_2016/Canada_wise_data_by_prov/vtapChnNRqQopJ_header.txt",
-                     "Data/census_data_2016/Canada_wise_data_by_prov/StozuELDohF9jp_data.csv",
-                     "Data/census_data_2016/Canada_wise_data_by_prov/StozuELDohF9jp_header.txt")
+ca.data.2006 = df_combine("Data/census_data_2006/Canada_wise_data_by_prov/retrieveCensusPROV_CA.csv",
+                     "Data/census_data_2006/Canada_wise_data_by_prov/retrieveCensusPROV_CA.txt")
 
-ca.data$year = 2016
+ca.data.2006$year = 2006
+ca.data.2006 = ca.data.2006[, -c(8,28)]
 
 #### extract indicators for pophr loader ####
-ca.values = ext_concept(ca.data, names(ca.data)[1])
-ca.values = lapply(ca.values, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
+ca.values.2006 = ext_concept(ca.data.2006, names(ca.data.2006)[1])
+ca.values.2006 = lapply(ca.values.2006, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
 
 #### extract age pyramid ####
-ca.pop.values = ext_pop_number(ca.data, names(ca.data)[1])
-ca.pop.values = lapply(list(ca.pop.values), ChangeNames_pop)#from 2cols, ChangeNames to "0-14","15-64","65+","Year"
+ca.pop.values.2006 = ext_pop_number(ca.data.2006, names(ca.data.2006)[1])
+ca.pop.values.2006 = lapply(list(ca.pop.values.2006), ChangeNames_pop)#from 2cols, ChangeNames to "0-14","15-64","65+","Year"
 
-ca.age.pry = ext_age_pry(ca.data, names(ca.data)[1])
-ca.age.pry$Year = 2016
+ca.age.pry.2006 = ext_age_pry(ca.data.2006, names(ca.data.2006)[1])
+ca.age.pry.2006$Year = 2006
 
-ca.values = c(ca.values, ca.pop.values = ca.pop.values, ca.age.pry = list(ca.age.pry))
-rm(ca.pop.values) ; rm(ca.age.pry)
+ca.values.2006 = c(ca.values.2006, ca.pop.values = ca.pop.values.2006, ca.age.pry = list(ca.age.pry.2006))
+rm(ca.pop.values.2006) ; rm(ca.age.pry.2006)
 #### output results ####
-writecsv(ca.values, "CA_Prov_2016") # the file name contains the first part of the first col in list 1 of clsc.values
+writecsv(ca.values, "CA_Prov_2006") # the file name contains the first part of the first col in list 1 of clsc.values
 

@@ -1,0 +1,94 @@
+2006 Profile of Census - Canada, provinces, territories / Cumulative Profiles
+COL0  - Province code 
+COL1  - Total population by sex and age groups - 100% data 
+COL2  - Total population by sex and age groups - 100% data / Male, total 
+COL3  - Male, total / 0 to 4 years 
+COL4  - Male, total / 5 to 9 years 
+COL5  - Male, total / 10 to 14 years 
+COL6  - Male, total / 15 to 19 years 
+COL7  - 15 to 19 years / 19 
+COL8  - Male, total / 20 to 24 years 
+COL9  - Male, total / 25 to 29 years 
+COL10 - Male, total / 30 to 34 years 
+COL11 - Male, total / 35 to 39 years 
+COL12 - Male, total / 40 to 44 years 
+COL13 - Male, total / 45 to 49 years 
+COL14 - Male, total / 50 to 54 years 
+COL15 - Male, total / 55 to 59 years 
+COL16 - Male, total / 60 to 64 years 
+COL17 - Male, total / 65 to 69 years 
+COL18 - Male, total / 70 to 74 years 
+COL19 - Male, total / 75 to 79 years 
+COL20 - Male, total / 80 to 84 years 
+COL21 - Male, total / 85 years and over 
+COL22 - Total population by sex and age groups - 100% data / Female, total 
+COL23 - Female, total / 0 to 4 years 
+COL24 - Female, total / 5 to 9 years 
+COL25 - Female, total / 10 to 14 years 
+COL26 - Female, total / 15 to 19 years 
+COL27 - 15 to 19 years / 19 
+COL28 - Female, total / 20 to 24 years 
+COL29 - Female, total / 25 to 29 years 
+COL30 - Female, total / 30 to 34 years 
+COL31 - Female, total / 35 to 39 years 
+COL32 - Female, total / 40 to 44 years 
+COL33 - Female, total / 45 to 49 years 
+COL34 - Female, total / 50 to 54 years 
+COL35 - Female, total / 55 to 59 years 
+COL36 - Female, total / 60 to 64 years 
+COL37 - Female, total / 65 to 69 years 
+COL38 - Female, total / 70 to 74 years 
+COL39 - Female, total / 75 to 79 years 
+COL40 - Female, total / 80 to 84 years 
+COL41 - Female, total / 85 years and over 
+COL42 - Total number of occupied private dwellings by housing tenure - 20% sample data 
+COL43 - Total number of occupied private dwellings by housing tenure - 20% sample data / Owned 
+COL44 - Total number of occupied private dwellings by housing tenure - 20% sample data / Rented 
+COL45 - Total number of occupied private dwellings by housing tenure - 20% sample data / Band housing 
+COL46 - Total number of private households by household type - 20% sample data 
+COL47 - Total number of private households by household type - 20% sample data / One-family households 
+COL48 - Total number of private households by household type - 20% sample data / Multiple-family households 
+COL49 - Total number of private households by household type - 20% sample data / Non-family households 
+COL50 - Total population by knowledge of official languages - 20% sample data 
+COL51 - Total population by knowledge of official languages - 20% sample data / English only 
+COL52 - Total population by knowledge of official languages - 20% sample data / French only 
+COL53 - Total population by knowledge of official languages - 20% sample data / English and French 
+COL54 - Total population by knowledge of official languages - 20% sample data / Neither English nor French 
+COL55 - Total population by citizenship - 20% sample data 
+COL56 - Total population by citizenship - 20% sample data / Canadian citizens 
+COL57 - Canadian citizens / Canadian citizens under age 18 
+COL58 - Canadian citizens / Canadian citizens age 18 and over 
+COL59 - Total population by citizenship - 20% sample data / Not Canadian citizens 
+COL60 - Total population by immigrant status and place of birth - 20% sample data 
+COL61 - Total population by immigrant status and place of birth - 20% sample data / Non-immigrants 
+COL62 - Total population by immigrant status and place of birth - 20% sample data / Immigrants 
+COL63 - Total population by immigrant status and place of birth - 20% sample data / Non-permanent residents 
+COL64 - Total population 15 years and over by labour force activity - 20% sample data 
+COL65 - Total population 15 years and over by labour force activity - 20% sample data / In the labour force 
+COL66 - In the labour force / Employed 
+COL67 - In the labour force / Unemployed 
+COL68 - Total population 15 years and over by labour force activity - 20% sample data / Not in the labour force 
+COL69 - Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data 
+COL70 - Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Car, truck, van, as driver 
+COL71 - Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Car, truck, van, as passenger 
+COL72 - Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Public transit 
+COL73 - Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Walked 
+COL74 - Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Bicycle 
+COL75 - Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Motorcycle 
+COL76 - Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Taxicab 
+COL77 - Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Other method 
+COL78 - Total population 15 to 24 years by highest certificate, diploma or degree - 20% sample data 
+COL79 - Total population 15 to 24 years by highest certificate, diploma or degree - 20% sample data / No certificate, diploma or degree 
+COL80 - Total population 15 to 24 years by highest certificate, diploma or degree - 20% sample data / Certificate, diploma or degree 
+COL81 - Total population 25 to 64 years by highest certificate, diploma or degree - 20% sample data 
+COL82 - Total population 25 to 64 years by highest certificate, diploma or degree - 20% sample data / No certificate, diploma or degree 
+COL83 - Total population 25 to 64 years by highest certificate, diploma or degree - 20% sample data / Certificate, diploma or degree 
+COL84 - Total population 65 years and over by highest certificate, diploma or degree - 20% sample data 
+COL85 - Total population 65 years and over by highest certificate, diploma or degree - 20% sample data / No certificate, diploma or degree 
+COL86 - Total population 65 years and over by highest certificate, diploma or degree - 20% sample data / Certificate, diploma or degree 
+COL87 - Total economic families - 20% sample data 
+COL88 - Total economic families - 20% sample data / Prevalence of low income after tax in 2005 % 
+COL89 - Total persons in private households - 20% sample data 
+COL90 - Total persons in private households - 20% sample data / Prevalence of low income after tax in 2005 % 
+COL91 - Total persons less than 6 years of age 
+COL92 - Total persons less than 6 years of age / Prevalence of low income after tax in 2005 % 

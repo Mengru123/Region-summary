@@ -2,7 +2,8 @@ df_read = function(df.csv, df.txt) {
     df = read.csv(df.csv, header = TRUE, stringsAsFactors = FALSE)
     df.txt = read.delim(df.txt, stringsAsFactors = FALSE)[-1,] # remove the title line in the name file
     for (i in 1:length(df.txt)) {
-        df.txt = gsub(paste('COL', i, ' - ', sep = ''), '', df.txt)
+        t1 = paste('COL', i, ' - ', '|', 'COL', i, '  - ',sep = '')
+        df.txt = gsub(pattern = t1, '', df.txt)
     }
     colnames(df) = append(df.txt, "census_id", after = 0 )
     return(df)
@@ -39,84 +40,79 @@ sum_by_key = function(df, key) {  # group to health regions
 }
 
 ext_concept = function(df, key) {
-    Lowincome_LICO_total = df %>% 
+
+    Lowincome_total = df %>% 
+        mutate(low.income_nom = `Total persons in private households - 20% sample data `  * `Total persons in private households - 20% sample data / Prevalence of low income after tax in 2005 % `/100) %>%
         select(as.character(key),
-               `Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT)`,
-               `Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data`,
+               low.income_nom,
+               `Total persons in private households - 20% sample data `,
                year )
     
-    Lowincome_LICO_0_17 = df %>%
+    Lowincome_0_6 = df %>%
+        mutate(low.income_nom = `Total persons less than 6 years of age `  * `Total persons less than 6 years of age / Prevalence of low income after tax in 2005 % `/100) %>%
         select(as.character(key),
-               `Income - Total Sex / In low income based on the Low-income cut-offs, after tax (LICO-AT) / 0 to 17 years`,
-               `Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data / 0 to 17 years`, 
+               low.income_nom,
+               `Total persons less than 6 years of age `,
                year)
    
-     Lowincome_LIM_total = df %>% 
-        select(as.character(key),
-               `Income - Total Sex / In low income based on the Low-income measure, after tax (LIM-AT)`,
-               `Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data`,
-               year )
-    
-    Lowincome_LIM_0_17 = df %>%
-        select(as.character(key),
-               `Income - Total Sex / In low income based on the Low-income measure, after tax (LIM-AT) / 0 to 17 years`,
-               `Income - Total Sex / Total - Low-income status in 2015 for the population in private households to whom low-income concepts are applicable - 100% data / 0 to 17 years`, 
-               year)
-    
     Employment = df %>%
         select(as.character(key),
-               `Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force / Employed`,
-               `Labour - Total Sex / Total - Population aged 15 years and over by Labour force status - 25% sample data / In the labour force`,
+               `In the labour force / Employed `,
+               `Total population 15 years and over by labour force activity - 20% sample data / In the labour force `,
                year)
-    
+
     Edu_lowerthanhigh = df %>%
+        mutate(edu_15above_low = `Total population 15 to 24 years by highest certificate, diploma or degree - 20% sample data / No certificate, diploma or degree `
+                   + `Total population 25 to 64 years by highest certificate, diploma or degree - 20% sample data / No certificate, diploma or degree `
+               + `Total population 65 years and over by highest certificate, diploma or degree - 20% sample data / No certificate, diploma or degree `)%>%
+        mutate(edu_15above_all= `Total population 15 to 24 years by highest certificate, diploma or degree - 20% sample data `
+               + `Total population 25 to 64 years by highest certificate, diploma or degree - 20% sample data `
+               + `Total population 65 years and over by highest certificate, diploma or degree - 20% sample data ` )%>%
         select(as.character(key),
-               `Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data / No certificate, diploma or degree`,
-               `Education - Total Sex / Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - 25% sample data`,
+               edu_15above_low,
+               edu_15above_all,
                year)
     
     Language_FrEn = df %>%                                                     # speak english or french
-        mutate(lang_fren= `Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / French only ; Both sexes` 
-               + `Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English and French ; Both sexes` 
-               +`Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes / English only ; Both sexes`)  %>% 
+        mutate(lang_fren= `Total population by knowledge of official languages - 20% sample data / English and French ` 
+               + `Total population by knowledge of official languages - 20% sample data / French only ` 
+               +`Total population by knowledge of official languages - 20% sample data / English only `)  %>% 
         select(as.character(key), lang_fren, 
-               `Knowledge of official language - Both sexes / Total - Knowledge of official languages for the total population excluding institutional residents - 100% data ; Both sexes`, 
+               `Total population by knowledge of official languages - 20% sample data `, 
                year)
     
     Journey_towork = df  %>%
-        mutate(commu = `Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data / Walked` 
-               + `Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data / Bicycle`)%>%
+        mutate(commu = `Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Walked ` 
+               + `Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data / Bicycle `)%>%
         select(as.character(key), 
                commu, 
-               `Journey to Work - Total Sex / Total - Main mode of commuting for the employed labour force aged 15 years and over in private households with a usual place of work or no fixed workplace address - 25% sample data`,
+               `Total employed labour force 15 years and over with usual place of work or no fixed workplace address by mode of transportation - 20% sample data `,
                year)
     
     Household_type = df %>%
-        mutate(census_family_all = `Households by type / Total - Private households by household type - 100% data / One-census-family households`
-               + `Households by type / Total - Private households by household type - 100% data / Multiple-census-family households`) %>%
+        mutate(census_family_all = `Total number of private households by household type - 20% sample data / One-family households `
+               + `Total number of private households by household type - 20% sample data / Multiple-family households `) %>%
         select(as.character(key),
                census_family_all,
-               `Households by type / Total - Private households by household type - 100% data`,
+               `Total number of private households by household type - 20% sample data `,
                year)
     
     Immigrant_type = df %>%
-        mutate(PR_above = `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-immigrants`
-               + `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants`) %>%
+        mutate(PR_above = `Total population by immigrant status and place of birth - 20% sample data / Non-immigrants `
+               + `Total population by immigrant status and place of birth - 20% sample data / Immigrants `) %>%
         select(as.character(key),
                PR_above,
-               `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data`,
+               `Total population by immigrant status and place of birth - 20% sample data `,
                year)
     
     Housing_type = df %>%
         select(as.character(key),
-               `Housing - Total Sex / Total - Private households by tenure - 25% sample data / Renter`,
-               `Housing - Total Sex / Total - Private households by tenure - 25% sample data`,
+               `Total number of occupied private dwellings by housing tenure - 20% sample data / Rented `,
+               `Total number of occupied private dwellings by housing tenure - 20% sample data `,
                year)
     
-    dfs = list(Lowincome_LICO_total = Lowincome_LICO_total, 
-               Lowincome_LICO_0_17 = Lowincome_LICO_0_17, 
-               Lowincome_LIM_total = Lowincome_LIM_total,
-               Lowincome_LIM_0_17 = Lowincome_LIM_0_17,
+    dfs = list(Lowincome_total = Lowincome_total,
+               Lowincome_0_6 = Lowincome_0_6,
                Employment = Employment,
                Edu_lowerthanhigh = Edu_lowerthanhigh,
                Language_FrEn = Language_FrEn,
@@ -130,7 +126,7 @@ ext_concept = function(df, key) {
 ext_pop_number = function(df, key) {
     Pop_number <- df %>%
         select(as.character(key),
-               `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes`,
+               `Total population by sex and age groups - 100% data `,
                #`Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 0 to 14 years ; Both sexes`,
               # `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 15 to 64 years ; Both sexes`,
               # `Age & Sex - Both sexes / Total - Age groups and average age of the population - 100% data ; Both sexes / 65 years and over ; Both sexes`,
@@ -150,42 +146,34 @@ ChangeNames_pop = function(x) {
 
 ext_age_pry = function(df,key) {
     df.F = df %>%
-        select_at(.vars = vars(as.character(key), starts_with("Age & Sex - Females / Total"))) %>%
-        select(-ends_with("/ 85 years and over ; Females" )) %>% 
-        select(-ends_with("/ 65 years and over ; Females" )) %>% 
-        select(-ends_with("/ 15 to 64 years ; Females" )) %>% 
-        select(-ends_with("/ 0 to 14 years ; Females" )) 
+        select_at(.vars = vars(as.character(key), `Total population by sex and age groups - 100% data / Female, total `, starts_with("Female, total / "))) 
     df.F = melt(df.F, id = c(as.character(key)), value.name = "Count", variable.name = "Age")
     df.F[] = lapply(df.F, gsub, 
-                    pattern = 'Age & Sex - Females / Total - Age groups and average age of the population - 100% data ; Females',
+                    pattern = 'Female, total / |Total population by sex and age groups - 100% data / Female, total ',
                     replacement ='') 
     df.F = df.F  %>%
         mutate(Age = if_else(is.na(Age)|Age =="", "Total", Age))
     df.F[] = lapply(df.F, gsub, 
-                    pattern = '/ 0 to 14 years ; Females / |/ 15 to 64 years ; Females / |/ 65 years and over ; Females / |85 years and over ; Females / | years ; Females| ; Females| ',
+                    pattern = '/ 0 to 14 years ; Females / |/ 15 to 64 years ; Females / |/ 65 years and over ; Females / |85 years and over ; Females / | years ; Females| ; Females| years ',
                     replacement ='')  
     df.F[] = lapply(df.F, gsub, 
-                    pattern = 'to|yearsandover',
+                    pattern = 'to|and over ',
                     replacement ='-') 
     df.F$Sex = "Female"
     
     df.M <- df %>%
-        select_at(.vars = vars(as.character(key), starts_with("Age & Sex - Males / Total"))) %>%
-        select(-ends_with("/ 85 years and over ; Males" )) %>% 
-        select(-ends_with("/ 65 years and over ; Males" )) %>% 
-        select(-ends_with("/ 15 to 64 years ; Males" )) %>% 
-        select(-ends_with("/ 0 to 14 years ; Males" )) 
+        select_at(.vars = vars(as.character(key), `Total population by sex and age groups - 100% data / Male, total `,starts_with("Male, total / "))) 
     df.M = melt(df.M, id = c(as.character(key)), value.name = "Count", variable.name = "Age")
     df.M[] = lapply(df.M, gsub, 
-                    pattern = 'Age & Sex - Males / Total - Age groups and average age of the population - 100% data ; Males',
+                    pattern = 'Total population by sex and age groups - 100% data / Male, total |Male, total / ',
                     replacement ='') 
     df.M = df.M  %>%
         mutate(Age = if_else(is.na(Age)|Age =="", "Total", Age))
     df.M[] = lapply(df.M, gsub, 
-                    pattern = '/ 0 to 14 years ; Males / |/ 15 to 64 years ; Males / |/ 65 years and over ; Males / |85 years and over ; Males / | years ; Males| ; Males| ',
+                    pattern = '/ 0 to 14 years ; Males / |/ 15 to 64 years ; Males / |/ 65 years and over ; Males / |85 years and over ; Males / | years ; Males| ; Males| years ',
                     replacement ='')  
     df.M[] = lapply(df.M, gsub, 
-                    pattern = 'to|yearsandover',
+                    pattern = 'to|and over ',
                     replacement ='-') 
     df.M$Sex = "Male"
     
@@ -195,5 +183,5 @@ ext_age_pry = function(df,key) {
 
 writecsv<-function(df.list, key){
     for (i in 1:length(df.list))
-        write.csv(df.list[i], file = paste0("Output/",as.character(key),"_",names(df.list[i]), "_2018.07.05.csv"))
+        write.csv(df.list[i], file = paste0("Output/",as.character(key),"_",names(df.list[i]), ".csv"))
 }
