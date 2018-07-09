@@ -1,0 +1,6 @@
+2011 National Household Survey (NHS) Profiles Files / Profile of Census Subdivisions
+COL0 - GEO UID
+COL1 - Household characteristics / Total number of private households by tenure
+COL2 - Household characteristics / Total number of private households by tenure / Owner
+COL3 - Household characteristics / Total number of private households by tenure / Renter
+COL4 - Household characteristics / Total number of private households by tenure / Band housing
