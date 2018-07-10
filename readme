@@ -14,46 +14,57 @@ There are concepts:
         fact tables contains:id, sex, age, count, year
         2006: 100% sample data
         2011: 2011 census profile
+        2016: 100% sample data
     2. total population number
         fact tables contains: id, total_population, year
         2006: 100% sample data
         2011: 2011 census profile
+        2016: 100% sample data
     3. household type: census-family/all household type
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
         2011: 2011 census profile
+        2016: 100% sample data
     4. official language: people speak EN or Fr/total population in this category. 
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
         2011: 2011 census profile
+        2016: 100% sample data
     5. Immigrant status: people (non-imm + or imm)/total population in this category. 
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
         2011: 2011 NHS
+        2016: 25% sample data
     6. Education status: people has lower than highschool edu/total pop 15+. 
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
         2011: 2011 NHS
+        2016: 25% sample data
     7. Labor status: people employed/people in labor force. 
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
         2011: 2011 NHS
+        2016: 25% sample data
     8. Commu to work: people walk or bike to work/total population in this category. 
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
         2011: 2011 NHS
+        2016: 25% sample data
     9. Housing status: people rent/ total population in this category. 
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
         2011: 2011 NHS
+        2016: 25% sample data
     10. Low-income: people in low-income/total population in this category. 
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
-        2011: 2011 NHS
+        2011: 2011 NHS (LIM_AT only)
+        2016: 100% sample data (LIM_AT, and LICO-AT)
     11. Low-income_0-17: people at 0_17 in low-income/total population at 0_17 in this category.
         # Low-income_0-6: people at 0_6 in low-income/total population at 0_6 in this category for census_2006
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
-        2011: 2011 NHS
+        2011: 2011 NHS (LIM_AT only)
+        2016: 100% sample data (LIM_AT, and LICO-AT)
         
     
