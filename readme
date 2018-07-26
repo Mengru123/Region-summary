@@ -3,9 +3,10 @@ Data source: canada census in 2016, 2011, 2006, 2001
 There are two set of outputs:
     1. Quebec data, at CLSC level
        data obtained from census at CD, CSD, DA, CT level 
-       Mapping table from census to CLSC is obtained from colleague
+       Mapping table from census to CLSC in 2006, 2011, 2016 are obtained from colleague 
           CD, CSD, DA, CT boundary file obtained in stats canada, 2016 boundry file
           CLSC boundary file obtained from QC gov website, 2016
+          
     2. Canada-wise data, at provincial level
         no mapping needed
     
