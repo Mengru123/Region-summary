@@ -47,7 +47,7 @@ census.data.2006$year = 2006
 rm(cd.data.2006);rm(csd.data.2006);rm(ct.data.2006);rm(da.data.2006)
 
 #### map to health region: CLSC ####
-map.table.clsc = read.csv("Data/census_data_2016/mapping_tables/clsc_census_mapping_gd.csv",header = TRUE) # mapping table btw census and CLSC, table obtained from Guido
+map.table.clsc = read.csv("Data/census_data_2006/clsc_census_mapping2006.csv",header = TRUE) # mapping table btw census and CLSC, table obtained from Guido
 map.clsc = merge(map.table.clsc, census.data.2006, by = "census_id")
 map.clsc= map.clsc[, !names(map.clsc) %in% c("census_id", "census_type")]
 rm(map.table.clsc)
