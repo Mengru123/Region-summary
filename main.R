@@ -52,7 +52,6 @@ da.data <- da.data[da.data$census_id > 2500, ]
 da.data = da.data[, -c(2:4)]
 
 census.data = do.call("rbind", list(cd.data, csd.data, ct.data, da.data))
-census.data$year = 2016
 rm(cd.data);rm(csd.data);rm(ct.data);rm(da.data)
 
 #### map to health region: CLSC ####
@@ -62,6 +61,7 @@ map.clsc= map.clsc[, !names(map.clsc) %in% c("census_id", "census_type")]
 rm(map.table.clsc)
 
 clsc.data = sum_by_key(map.clsc, colnames(map.clsc)[1]) # sum_by_key in function.R
+clsc.data$year = 2016
 rm(map.clsc)
 
 #### extract nine indicators for pophr loader ####
@@ -78,7 +78,6 @@ clsc.age.pry$Year = 2016
 clsc.values = c(clsc.values, clsc.pop.values = clsc.pop.values, clsc.age.pry = list(clsc.age.pry))
 rm(clsc.pop.values) ; rm(clsc.age.pry)
 #### output results ####
- Canada_wise_data
 writecsv(clsc.values, "CLSC_2016") # the file name contains the first part of the first col in list 1 of clsc.values
 
 
