@@ -97,11 +97,18 @@ ext_concept = function(df, key) {
                `Total number of private households by household type - 20% sample data `,
                year)
     
+    #Immigrant_type = df %>%
+     #   mutate(PR_above = `Total population by immigrant status and place of birth - 20% sample data / Non-immigrants `
+      #         + `Total population by immigrant status and place of birth - 20% sample data / Immigrants `) %>%
+       # select(as.character(key),
+        #       PR_above,
+         #      `Total population by immigrant status and place of birth - 20% sample data `,
+          #     year)
+    
+    
     Immigrant_type = df %>%
-        mutate(PR_above = `Total population by immigrant status and place of birth - 20% sample data / Non-immigrants `
-               + `Total population by immigrant status and place of birth - 20% sample data / Immigrants `) %>%
         select(as.character(key),
-               PR_above,
+               `Total population by immigrant status and place of birth - 20% sample data / Immigrants `,
                `Total population by immigrant status and place of birth - 20% sample data `,
                year)
     
