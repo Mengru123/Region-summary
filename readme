@@ -31,7 +31,7 @@ There are concepts:
         2006: 20% sample data
         2011: 2011 census profile
         2016: 100% sample data
-    5. Immigrant status: people (non-imm + or imm)/total population in this category. 
+    5. Immigrant status: immigrants/total population in this category. 
         fact table contains: numerator, denominator, and year
         2006: 20% sample data
         2011: 2011 NHS
