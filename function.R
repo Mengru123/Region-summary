@@ -99,11 +99,17 @@ ext_concept = function(df, key) {
                `Households by type / Total - Private households by household type - 100% data`,
                year)
     
+    #Immigrant_type = df %>%
+     #   mutate(PR_above = `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-immigrants`
+      #         + `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants`) %>%
+       # select(as.character(key),
+        #       PR_above,
+         #      `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data`,
+          #     year)
+    
     Immigrant_type = df %>%
-        mutate(PR_above = `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Non-immigrants`
-               + `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants`) %>%
-        select(as.character(key),
-               PR_above,
+       select(as.character(key),
+               `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data / Immigrants`,
                `Immigration - Total Sex / Total - Immigrant status and period of immigration for the population in private households - 25% sample data`,
                year)
     
