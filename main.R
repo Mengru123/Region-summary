@@ -56,7 +56,6 @@ da.names = gsub(pattern = "Car",
 names(da.data.2011) = da.names
 
 census.data.2011 = do.call("rbind", list(cd.data.2011, csd.data.2011, ct.data.2011, da.data.2011))
-census.data.2011$year = 2011
 rm(cd.data.2011);rm(csd.data.2011);rm(ct.data.2011);rm(da.data.2011)
 
 #### map to health region: CLSC ####
@@ -66,6 +65,7 @@ map.clsc.2011= map.clsc.2011[, !names(map.clsc.2011) %in% c("census_id", "census
 rm(map.table.clsc)
 
 clsc.data.2011 = sum_by_key(map.clsc.2011, colnames(map.clsc.2011)[1]) # sum_by_key in function.R
+clsc.data.2011$year = 2011
 rm(map.clsc.2011)
 
 #### extract nine indicators for pophr loader ####
