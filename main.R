@@ -43,7 +43,6 @@ names(ct.data.2006) = col.names
 names(da.data.2006) = col.names
 
 census.data.2006 = do.call("rbind", list(cd.data.2006, csd.data.2006, ct.data.2006, da.data.2006))
-census.data.2006$year = 2006
 rm(cd.data.2006);rm(csd.data.2006);rm(ct.data.2006);rm(da.data.2006)
 
 #### map to health region: CLSC ####
@@ -53,6 +52,7 @@ map.clsc= map.clsc[, !names(map.clsc) %in% c("census_id", "census_type")]
 rm(map.table.clsc)
 
 clsc.data.2006 = sum_by_key(map.clsc, colnames(map.clsc)[1]) # sum_by_key in function.R
+clsc.data.2006$year = 2006
 rm(map.clsc)
 
 #### extract nine indicators for pophr loader ####
