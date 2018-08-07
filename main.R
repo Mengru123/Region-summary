@@ -33,7 +33,12 @@ csd.data.2011 = df_combine("Data/census_data_2011/QC/h9UaJOB67yLyx_data_CSD.csv"
 ct.data.2011 = df_combine("Data/census_data_2011/QC/bhJdinbwGRl9_data_CT.csv",
                      "Data/census_data_2011/QC/bhJdinbwGRl9_header_CT.txt",
                      "Data/census_data_2011/QC/Bxz8przOfwtQM_data_CT.csv",
-                     "Data/census_data_2011/QC/Bxz8przOfwtQM_header_CT.txt")
+                     "Data/census_data_2011/QC/Bxz8przOfwtQM_header_CT.txt",
+                     "Data/census_data_2011/QC/LHlui9jp9ipo_data_NHS_Gatineau_CT.csv",
+                     "Data/census_data_2011/QC/LHlui9jp9ipo_header_NHS_Gitineau_CT.txt",
+                     "Data/census_data_2011/QC/tcet77319IeUj8x_data_Gatineau_CT.csv",
+                     "Data/census_data_2011/QC/tcet77319IeUj8x_header_Gatineau_CT.txt")
+
 
 da.data.2011 = df_combine("Data/census_data_2011/QC/yP2elduJ_data_DA.csv",
                      "Data/census_data_2011/QC/yP2elduJ_header_DA.txt",
