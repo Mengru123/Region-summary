@@ -95,6 +95,5 @@ COL92 - Total persons less than 6 years of age
 COL93 - Total persons less than 6 years of age / Prevalence of low income before tax in 2005 %
 COL94 - Total persons less than 6 years of age / Prevalence of low income after tax in 2005 %
 COL95 - Total number of non-farm, non-reserve private dwellings occupied by usual residents - 20% sample data
-COL96 - Total number of non-farm, non-reserve private dwellings occupied by usual residents - 20% sample data / Tenant-occupied private non-farm, non-reserve dwellings
-COL97 - Total number of non-farm, non-reserve private dwellings occupied by usual residents - 20% sample data / Tenant-occupied households spending 30% or more of household income on gross rent
-COL98 - Total number of non-farm, non-reserve private dwellings occupied by usual residents - 20% sample data / Owner-occupied private non-farm, non-reserve dwellings
+COL96 - Total number of non-farm, non-reserve private dwellings occupied by usual residents - 20% sample data / Tenant-occupied households spending 30% or more of household income on gross rent
+COL97 - Total number of non-farm, non-reserve private dwellings occupied by usual residents - 20% sample data / Owner-occupied private non-farm, non-reserve dwellings

@@ -19,11 +19,13 @@ cd.data.2006 = df_combine("Data/census_data_2006/census_2006_CD.csv",
                           "Data/census_data_2006/census_2006_CD.txt")
 
 csd.data.2006 = df_combine("Data/census_data_2006/census_2006_CSD.csv", 
-                     "Data/census_data_2006/census_2006_CSD.txt")
+                         "Data/census_data_2006/census_2006_CSD.txt")
 
 ct.data.2006 = df_combine("Data/census_data_2006/U4pAzOO9PHIoycFC_data_CT.csv",
-                     "Data/census_data_2006/U4pAzOO9PHIoycFC_header_CT.txt")
-ct.data.2006 = ct.data.2006[, -1]
+                     "Data/census_data_2006/U4pAzOO9PHIoycFC_header_CT.txt",
+                     "Data/census_data_2006/cpgDbfPyr0C_data_Gatineau_CT.csv",
+                     "Data/census_data_2006/cpgDbfPyr0C_header_Gatineau_CT.txt")
+
 names(ct.data.2006)[1] = "census_id"
 
 da.data.2006 = df_combine("Data/census_data_2006/cGcSMP3oFgv_data_DA.csv",
