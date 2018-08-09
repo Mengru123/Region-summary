@@ -1,5 +1,4 @@
 2006 Profile of Census Tracts / Cumulative Profiles
-COL0 - Census Tract name
 COL1 - CTUID (CMA/CA code + CT name)
 COL2 - Total population by sex and age groups - 100% data
 COL3 - Total population by sex and age groups - 100% data / Male, total
