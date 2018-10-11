@@ -97,6 +97,9 @@ ext_concept = function(df, key) {
                `Total number of private households by household type - 20% sample data `,
                year)
     
+    # the no.of census_family_all is different from no.of census families in private household(this tends to be bigger), 
+    # as if one multi-family household will count 1 in census_family_all, but could count as 3 if it has three census-families
+ 
     #Immigrant_type = df %>%
      #   mutate(PR_above = `Total population by immigrant status and place of birth - 20% sample data / Non-immigrants `
       #         + `Total population by immigrant status and place of birth - 20% sample data / Immigrants `) %>%

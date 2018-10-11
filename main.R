@@ -2,6 +2,7 @@ library(dplyr)
 library(plyr)
 library(reshape2)
 library(tidyr)
+library(tmap)
 
 options("digits" = 12)
 source('function.R')
@@ -12,8 +13,7 @@ source('function.R')
 # 4. education here need to added up in the script 15-24,25-65, 65+
 
 # Quebec 2006 data, at CLSC level -----------------------------------------
-
-#### read in the datasets obtained from census 2016, at four different region devisions ####
+#### read in the datasets obtained from census 2006, at four different region devisions ####
 # df_combine in function.R
 cd.data.2006 = df_combine("Data/census_data_2006/census_2006_CD.csv", 
                           "Data/census_data_2006/census_2006_CD.txt")
@@ -23,13 +23,8 @@ csd.data.2006 = df_combine("Data/census_data_2006/census_2006_CSD.csv",
 
 ct.data.2006 = df_combine("Data/census_data_2006/U4pAzOO9PHIoycFC_data_CT.csv",
                      "Data/census_data_2006/U4pAzOO9PHIoycFC_header_CT.txt",
-<<<<<<< HEAD
                      "Data/census_data_2006/cpgDbfPyr0C_data_Gatineau_CT.csv",
                      "Data/census_data_2006/cpgDbfPyr0C_header_Gatineau_CT.txt")
-=======
-                     "Data/census_data_2006/cpgDbfPyr0C_data_Ganibeau_CT.csv",
-                     "Data/census_data_2006/cpgDbfPyr0C_header_Ganibeau_CT.txt")
->>>>>>> 702ab8e857dae0bb7a8ccf7e1a76df5a05409ead
 
 names(ct.data.2006)[1] = "census_id"
 
@@ -79,11 +74,8 @@ rm(clsc.pop.values.2006) ; rm(clsc.age.pry.2006)
 writecsv(clsc.values.2006, "CLSC_2006") # the file name contains the first part of the first col in list 1 of clsc.values
 
 
-
-
 # Canada 2016 data, at province level, no mapping needed -------------------------------------
-
-#### read in the datasets obtained from census 2016, at provincial level ####
+#### read in the datasets obtained from census 2006, at provincial level ####
 ca.data.2006 = df_combine("Data/census_data_2006/Canada_wise_data_by_prov/retrieveCensusPROV_CA.csv",
                      "Data/census_data_2006/Canada_wise_data_by_prov/retrieveCensusPROV_CA.txt")
 
@@ -105,4 +97,6 @@ ca.values.2006 = c(ca.values.2006, ca.pop.values = ca.pop.values.2006, ca.age.pr
 rm(ca.pop.values.2006) ; rm(ca.age.pry.2006)
 #### output results ####
 writecsv(ca.values.2006, "CA_Prov_2006") # the file name contains the first part of the first col in list 1 of clsc.values
+
+
 
