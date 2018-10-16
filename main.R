@@ -109,3 +109,40 @@ rm(ca.pop.values) ; rm(ca.age.pry)
 #### output results ####
 writecsv(ca.values, "CA_Prov_2016") # the file name contains the first part of the first col in list 1 of clsc.values
 
+# Canada 2016 data, at health region level, mapping needed -------------------------------------
+ca.hr.csd.data.2016 = df_combine("Data/census_data_2016/Canada_wise_data_by_hr/JGIgKwt06AB5T9h_data_CSD.csv", 
+                                 "Data/census_data_2016/Canada_wise_data_by_hr/JGIgKwt06AB5T9h_data_CSD.txt")
+
+ca.hr.da.data.2016 = df_combine("Data/census_data_2016/Canada_wise_data_by_hr/bgQq89z8aLC_data_DA.csv", 
+                                "Data/census_data_2016/Canada_wise_data_by_hr/bgQq89z8aLC_data_DA.txt")
+
+ca.hr.da.data.2016 <- ca.hr.da.data.2016[ca.hr.da.data.2016$census_id > 2500, ]
+
+ca.hr.census.data.2016 = do.call("rbind", list(ca.hr.csd.data.2016, ca.hr.da.data.2016))
+rm(ca.hr.da.data.2016);rm(ca.hr.csd.data.2016)
+
+#### map to health region ####
+map.table.hr = read.csv("Data/census_data_2016/Canada_wise_data_by_hr/map.table.hr.2016.census.csv",header = TRUE) # mapping table btw census and CLSC, table obtained from Guido
+map.hr = merge(map.table.hr, ca.hr.census.data.2016, by = "census_id")
+map.hr= map.hr[, !names(map.hr) %in% c("census_id", "census_type")]
+rm(map.table.hr)
+
+hr.data.2016 = sum_by_key(map.hr, colnames(map.hr)[1]) # sum_by_key in function.R
+hr.data.2016$year = 2016
+rm(map.hr)
+
+#### extract nine indicators for pophr loader ####
+hr.values.2016 = ext_concept(hr.data.2016, "HR_code")
+hr.values.2016 = lapply(hr.values.2016, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
+
+#### extract age pyramid ####
+hr.pop.values.2016 = ext_pop_number(hr.data.2016, "HR_code")
+hr.pop.values.2016 = lapply(list(hr.pop.values.2016), ChangeNames_pop)#from 2cols, ChangeNames to "0-14","15-64","65+","Year"
+
+hr.age.pry.2016 = ext_age_pry(hr.data.2016, "HR_code")
+hr.age.pry.2016$Year = 2016
+
+hr.values.2016 = c(hr.values.2016, hr.pop.values = hr.pop.values.2016, hr.age.pry = list(hr.age.pry.2016))
+rm(hr.pop.values.2016) ; rm(hr.age.pry.2016)
+#### output results ####
+writecsv(hr.values.2016, "HR_2016") # the file name contains the first part of the first col in list 1 of clsc.values
