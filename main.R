@@ -89,7 +89,6 @@ rm(clsc.pop.values.2011) ; rm(clsc.age.pry.2011)
 #### output results ####
 writecsv(clsc.values.2011, "CLSC_2011")
 
-
 # Canada 2011 data, at province level, no mapping needed -------------------------------------
 
 #### read in the datasets obtained from census 2016, at provincial level ####
@@ -115,4 +114,59 @@ ca.values.2011 = c(ca.values.2011, ca.pop.values = ca.pop.values.2011, ca.age.pr
 rm(ca.pop.values.2011) ; rm(ca.age.pry.2011)
 #### output results ####
 writecsv(ca.values.2011, "CA_Prov_2011") # the file name contains the first part of the first col in list 1 of clsc.values
+
+
+# Canada 2011 data, at health region level, mapping needed -------------------------------------
+ca.hr.csd.data.2011 = df_combine("Data/census_data_2011/Canada_wise_data_by_hr/s2y5tzCsUDNP_data_CSD.csv", 
+                                 "Data/census_data_2011/Canada_wise_data_by_hr/s2y5tzCsUDNP_data_CSD.txt",
+                                 "Data/census_data_2011/Canada_wise_data_by_hr/fGhQjdul4JNj_data_CSD.csv", 
+                                 "Data/census_data_2011/Canada_wise_data_by_hr/fGhQjdul4JNj_data_CSD.txt")
+
+ca.hr.da.data.2011 = df_combine("Data/census_data_2011/Canada_wise_data_by_hr/Mzwu1NrREVKF_data_DA.csv", 
+                                "Data/census_data_2011/Canada_wise_data_by_hr/Mzwu1NrREVKF_data_DA.txt",
+                                "Data/census_data_2011/Canada_wise_data_by_hr/ElJjEEJaboif_data_DA.csv", 
+                                "Data/census_data_2011/Canada_wise_data_by_hr/ElJjEEJaboif_data_DA.txt")
+
+ca.hr.da.data.2011 <- ca.hr.da.data.2011[ca.hr.da.data.2011$census_id > 2500, ]
+
+ca.hr.csd.data.2011 = ca.hr.csd.data.2011[, order(names(ca.hr.csd.data.2011))]
+ca.hr.da.data.2011 = ca.hr.da.data.2011[, order(names(ca.hr.da.data.2011))]
+
+da.names = names(ca.hr.da.data.2011)
+da.names = gsub(pattern = "certificate", 
+                replacement =  "certificate,",
+                x = da.names)
+da.names = gsub(pattern = "Car", 
+                replacement =  "Car,",
+                x = da.names)
+names(ca.hr.da.data.2011) = da.names
+
+ca.hr.census.data.2011 = do.call("rbind", list(ca.hr.csd.data.2011, ca.hr.da.data.2011))
+rm(ca.hr.da.data.2011);rm(ca.hr.csd.data.2011)
+
+#### map to health region ####
+map.table.hr = read.csv("Data/census_data_2011/Canada_wise_data_by_hr/map.table.hr.2011.census.csv",header = TRUE) # mapping table btw census and CLSC, table obtained from Guido
+map.hr = merge(map.table.hr, ca.hr.census.data.2011, by = "census_id")
+map.hr= map.hr[, !names(map.hr) %in% c("census_id", "census_type")]
+rm(map.table.hr)
+
+hr.data.2011 = sum_by_key(map.hr, colnames(map.hr)[1]) # sum_by_key in function.R
+hr.data.2011$year = 2011
+rm(map.hr)
+
+#### extract nine indicators for pophr loader ####
+hr.values.2011 = ext_concept(hr.data.2011, "HR_code")
+hr.values.2011 = lapply(hr.values.2011, ChangeNames) #from 2cols, ChangeNames to "Nom", "Den", "Year"
+
+#### extract age pyramid ####
+hr.pop.values.2011 = ext_pop_number(hr.data.2011, "HR_code")
+hr.pop.values.2011 = lapply(list(hr.pop.values.2011), ChangeNames_pop)#from 2cols, ChangeNames to "0-14","15-64","65+","Year"
+
+hr.age.pry.2011 = ext_age_pry(hr.data.2011, "HR_code")
+hr.age.pry.2011$Year = 2011
+
+hr.values.2011 = c(hr.values.2011, hr.pop.values = hr.pop.values.2011, hr.age.pry = list(hr.age.pry.2011))
+rm(hr.pop.values.2011) ; rm(hr.age.pry.2011)
+#### output results ####
+writecsv(hr.values.2011, "HR_2011") # the file name contains the first part of the first col in list 1 of clsc.values
 
