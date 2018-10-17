@@ -118,6 +118,12 @@ ca.hr.da.data.2016 = df_combine("Data/census_data_2016/Canada_wise_data_by_hr/bg
 
 ca.hr.da.data.2016 <- ca.hr.da.data.2016[ca.hr.da.data.2016$census_id > 2500, ]
 
+<<<<<<< HEAD
+=======
+ca.hr.csd.data.2016 = ca.hr.csd.data.2016[, order(names(ca.hr.csd.data.2016))]
+ca.hr.da.data.2016 = ca.hr.da.data.2016[, order(names(ca.hr.da.data.2016))]
+
+>>>>>>> 4ef31938cf96ed4c38c38bbf58a574cbe2937019
 ca.hr.census.data.2016 = do.call("rbind", list(ca.hr.csd.data.2016, ca.hr.da.data.2016))
 rm(ca.hr.da.data.2016);rm(ca.hr.csd.data.2016)
 
